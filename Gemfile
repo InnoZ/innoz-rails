@@ -31,8 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Custom gems for innoz-rails project
-gem 'postgresql'
+gem 'bootstrap-sass'
 gem 'haml'
+gem 'postgresql'
 gem 'rubocop'
 
 # Use Capistrano for deployment

@@ -1,0 +1,28 @@
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'test/**/*'
+    - 'deploy/*'
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'app/**/*'
+    - 'config/**/*'
+
+Metrics/LineLength:
+  Max: 120
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%w': '[]'
+    '%i': '[]'
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+
+Metrics/MethodLength:
+  Max: 15
