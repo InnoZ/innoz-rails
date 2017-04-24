@@ -7,6 +7,10 @@ AllCops:
     - 'db/**/*'
     - 'test/**/*'
     - 'deploy/*'
+    - '**/Gemfile'
+    - 'config/puma.rb'
+    - 'config/spring.rb'
+    - 'config/environments/**'
 Style/Documentation:
   Exclude:
     - 'spec/**/*'
@@ -23,6 +27,9 @@ Style/PercentLiteralDelimiters:
 
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
 
 Metrics/MethodLength:
   Max: 15
