@@ -15,17 +15,17 @@ $(document).ready(function(){
 	 */
 	displayHelper.initializePoll = function(){
 
-		if (window.location.href.includes('ahp_major_topic')) {
+		if (window.location.href.includes('ahp_major')) {
 			displayHelper.addTopicsOptionsToList(topics.majorTopics);
-		} else if (window.location.href.includes('ahp_mobility_topic')) {
+		} else if (window.location.href.includes('ahp_mobility')) {
 			displayHelper.addTopicsOptionsToList(topics.mobilityTopics);
-		} else if (window.location.href.includes('ahp_energy_topic')) {
+		} else if (window.location.href.includes('ahp_energy')) {
 			displayHelper.addTopicsOptionsToList(topics.energyTopics);
-		} else if (window.location.href.includes('ahp_socioeconomic_topic')) {
+		} else if (window.location.href.includes('ahp_socioeconomic')) {
 			displayHelper.addTopicsOptionsToList(topics.mobilityTopics);
-		} else if (window.location.href.includes('ahp_regionalstructure_topic')) {
+		} else if (window.location.href.includes('ahp_regionalstructure')) {
 			displayHelper.addTopicsOptionsToList(topics.energyTopics);
-		}
+		};
 
 		// bind events
 		$('#addOption').click(function(){
