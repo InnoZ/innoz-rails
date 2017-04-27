@@ -6,6 +6,8 @@ $(document).ready(function(){
 		majorTopics: 'Mobilität | Energie | Sozioökonomie | Regionalstruktur',
 		mobilityTopics: 'Carsharing | Bikesharing | PKW Dichte',
 		energyTopics: 'Windkraft | Photovoltaik | Ladeinfrastruktur',
+		socioEconomicTopics: 'Einkommen | Arbeitslose | Alter',
+		regionalStructureTopics: 'Bevölkerungspotenzial | Gemeindetyp'
 	};
 
 	/**
@@ -18,6 +20,10 @@ $(document).ready(function(){
 		} else if (window.location.href.includes('ahp_mobility_topic')) {
 			displayHelper.addTopicsOptionsToList(topics.mobilityTopics);
 		} else if (window.location.href.includes('ahp_energy_topic')) {
+			displayHelper.addTopicsOptionsToList(topics.energyTopics);
+		} else if (window.location.href.includes('ahp_socioeconomic_topic')) {
+			displayHelper.addTopicsOptionsToList(topics.mobilityTopics);
+		} else if (window.location.href.includes('ahp_regionalstructure_topic')) {
 			displayHelper.addTopicsOptionsToList(topics.energyTopics);
 		}
 
