@@ -7,7 +7,11 @@ $(document).ready(function(){
 	 */
 	displayHelper.initializePoll = function(){
 
-		displayHelper.addMajorTopicsOptionsToList();
+		if (window.location.href.includes('ahp_major_topic')) {
+			displayHelper.addMajorTopicsOptionsToList();
+		} else if (window.location.href.includes('ahp_mobility_topic')) {
+			displayHelper.addMobilityTopicsOptionsToList();
+		}
 
 		// bind events
 		$('#addOption').click(function(){
@@ -76,6 +80,20 @@ $(document).ready(function(){
 		$('#optionsList').empty();
 
 		var options = 'Mobilität | Energie | Sozioökonomie | Regionalstruktur'
+		var optionArray = options.split('|');
+
+		// add each option
+		$.each(optionArray, function(){
+			displayHelper._addOption(this);
+		});
+
+	};
+
+	displayHelper.addMobilityTopicsOptionsToList = function(){
+		// add major topic options
+		$('#optionsList').empty();
+
+		var options = 'Carsharing | Bikesharing | PKW Dichte'
 		var optionArray = options.split('|');
 
 		// add each option

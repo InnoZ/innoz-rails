@@ -1,0 +1,71 @@
+= javascript_include_tag 'site.js'
+= javascript_include_tag 'ahpCalc.obj.js'
+
+%head
+  %title AHP
+%body
+  .container
+    / poll setup
+    %h3{style: 'font-weight: bold; font-size: 30px;'} AHP Framework
+    %h2{style: 'font-weight: bold;'} Subtopic Mobility
+    .setup
+      / option list
+      %br
+      %fieldset
+        %legend Options
+        %table#optionsList
+        .newOption
+    / start,stop, retry buttons
+    %div
+      %input.startPoll{:type => "button", :value => "Start"}/
+      %input.stopPoll{:style => "display:none;", :type => "button", :value => "Stop"}/
+    / poll questions
+    #pollQuestions{:style => "display:none;"}
+      / displlay poll pair
+      %h3 Poll Question
+      %table
+        %tr
+          %td.pollQuestionTitle{:colspan => "3"}
+            %span.questionTextDisplay Question
+        %tr
+          %td#pollQuestion1.pollQuestion
+          %td
+          %td#pollQuestion2.pollQuestion
+        / Simple voting buttons
+        %tr.simplePollButtons
+          %td
+            %input#L_MuchMore{:disabled => "disabled", :type => "button", :value => "<< Much More"}/
+            %input#L_SlightlyMore{:disabled => "disabled", :type => "button", :value => "< Slightly More"}/
+          %td
+            %input#L_R_Same.pollVoteLink{:disabled => "disabled", :type => "button", :value => "Same"}/
+          %td
+            %input#R_SlightlyMore{:disabled => "disabled", :type => "button", :value => "Slightly More >"}/
+            %input#R_MuchMore{:disabled => "disabled", :type => "button", :value => "Much More >>"}/
+        / Detailed voting buttons
+        %tr.detailedPollButtons
+          %td
+            %input.leftMore{:type => "button", :value => "10"}/
+            %input.leftMore{:type => "button", :value => "9"}/
+            %input.leftMore{:type => "button", :value => "8"}/
+            %input.leftMore{:type => "button", :value => "7"}/
+            %input.leftMore{:type => "button", :value => "6"}/
+            %input.leftMore{:type => "button", :value => "5"}/
+            %input.leftMore{:type => "button", :value => "4"}/
+            %input.leftMore{:type => "button", :value => "3"}/
+            %input.leftMore{:type => "button", :value => "2"}/
+          %td
+            %input.same{:type => "button", :value => "1"}/
+          %td
+            %input.rightMore{:type => "button", :value => "2"}/
+            %input.rightMore{:type => "button", :value => "3"}/
+            %input.rightMore{:type => "button", :value => "4"}/
+            %input.rightMore{:type => "button", :value => "5"}/
+            %input.rightMore{:type => "button", :value => "6"}/
+            %input.rightMore{:type => "button", :value => "7"}/
+            %input.rightMore{:type => "button", :value => "8"}/
+            %input.rightMore{:type => "button", :value => "9"}/
+            %input.rightMore{:type => "button", :value => "10"}/
+      %span.questionIndex 0
+    / results
+    #pollResults
+      %h3 Poll Results
