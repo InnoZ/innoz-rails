@@ -2,15 +2,23 @@ $(document).ready(function(){
 
 	var displayHelper = {};
 
+	var topics = {
+		majorTopics: 'Mobilität | Energie | Sozioökonomie | Regionalstruktur',
+		mobilityTopics: 'Carsharing | Bikesharing | PKW Dichte',
+		energyTopics: 'Windkraft | Photovoltaik | Ladeinfrastruktur',
+	};
+
 	/**
 	 * purpose: initialize the poll
 	 */
 	displayHelper.initializePoll = function(){
 
 		if (window.location.href.includes('ahp_major_topic')) {
-			displayHelper.addMajorTopicsOptionsToList();
+			displayHelper.addTopicsOptionsToList(topics.majorTopics);
 		} else if (window.location.href.includes('ahp_mobility_topic')) {
-			displayHelper.addMobilityTopicsOptionsToList();
+			displayHelper.addTopicsOptionsToList(topics.mobilityTopics);
+		} else if (window.location.href.includes('ahp_energy_topic')) {
+			displayHelper.addTopicsOptionsToList(topics.energyTopics);
 		}
 
 		// bind events
@@ -75,25 +83,10 @@ $(document).ready(function(){
 
 	};
 
-	displayHelper.addMajorTopicsOptionsToList = function(){
+	displayHelper.addTopicsOptionsToList = function(options){
 		// add major topic options
 		$('#optionsList').empty();
 
-		var options = 'Mobilität | Energie | Sozioökonomie | Regionalstruktur'
-		var optionArray = options.split('|');
-
-		// add each option
-		$.each(optionArray, function(){
-			displayHelper._addOption(this);
-		});
-
-	};
-
-	displayHelper.addMobilityTopicsOptionsToList = function(){
-		// add major topic options
-		$('#optionsList').empty();
-
-		var options = 'Carsharing | Bikesharing | PKW Dichte'
 		var optionArray = options.split('|');
 
 		// add each option
