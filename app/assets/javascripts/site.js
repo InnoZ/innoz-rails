@@ -22,9 +22,9 @@ $(document).ready(function(){
 		} else if (window.location.href.includes('ahp_energy')) {
 			displayHelper.addTopicsOptionsToList(topics.energyTopics);
 		} else if (window.location.href.includes('ahp_socioeconomic')) {
-			displayHelper.addTopicsOptionsToList(topics.mobilityTopics);
+			displayHelper.addTopicsOptionsToList(topics.socioEconomicTopics);
 		} else if (window.location.href.includes('ahp_regionalstructure')) {
-			displayHelper.addTopicsOptionsToList(topics.energyTopics);
+			displayHelper.addTopicsOptionsToList(topics.regionalStructureTopics);
 		};
 
 		// bind events
