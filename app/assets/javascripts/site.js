@@ -441,6 +441,27 @@ $(document).ready(function(){
 		ahp._displayNextQuestion();
 	};
 
+	ahp._handleResult = function(calcResults){
+
+		if (window.location.href.includes('ahp_major')) {
+			for(var i = 0; i < ahp.optionArray.length; i++){
+
+				var majorResultText = this._convertRealToRoundedPercent(calcResults.resultColumn[i]);
+
+				alert(ahp.optionArray[i]);
+				alert(majorResultText);
+			}
+		} else if (window.location.href.includes('ahp_mobility')) {
+				for(var i = 0; i < ahp.optionArray.length; i++){
+
+				var mobilityResultText = this._convertRealToRoundedPercent(calcResults.resultColumn[i]);
+
+				alert(ahp.optionArray[i]);
+				alert(mobilityResultText);
+			}
+		}
+	};
+
 	/**
 	 * purpose: calculate the results
 	 */
@@ -455,6 +476,7 @@ $(document).ready(function(){
 
 		// display the results
 		ahp._displayResults(calcResults);
+		ahp._handleResult(calcResults);
 
 		displayHelper.changePoll();
 	};
