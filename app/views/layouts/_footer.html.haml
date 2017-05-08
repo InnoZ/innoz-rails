@@ -1,0 +1,37 @@
+%footer.dark-bg
+  .container.inner
+    .row
+      .col-sm-4.inner
+        %h4 About us
+        %figure
+          = image_tag 'logo_innoz_rails.png', class: 'logo'
+        %p This is a service of InnoZ
+        = link_to 'learn more', 'http://www.innoz.de', class: 'txt-btn'
+
+      .col-sm-4.inner
+        %h4 Contact us
+        %p Innovationszentrum für Mobilität und gesellschaftlichen Wandel (InnoZ) GmbH
+        %ul.contacts
+          %li
+            %i.icon-location.contact
+            EUREF-Campus 16, 10829 Berlin
+          %li
+            %i.icon-mobile.contact
+            +49 (0)30 23 88 84 - 108
+          %li
+            %i.icon-mail-1.contact
+            = mail_to 'consulting@innoz.de'
+
+      .col-sm-4.inner
+        %h4 InnoZ Rails
+        - pages.each do |p|
+          = link_to p, send(p + '_path')
+          %br
+
+  .footer-bottom
+    .container.inner
+      %p.pull-left © 2016 InnoZ GmbH. All rights reserved.
+      %ul.footer-menu.pull-right
+        = link_to 'Imprint', imprint_path
+        = ' | '
+        = link_to 'Privacy', privacy_path

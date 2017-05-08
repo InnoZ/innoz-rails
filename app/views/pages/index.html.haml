@@ -1,10 +1,20 @@
-%nav.navbar.navbar-default
-  .container-fluid
-    .navbar-header
-      %a.navbar-brand{:href => "#"} InnoZ Rails Template
-    %ul.nav.navbar-nav
-      %li.active
-        %a{:href => "#"} Link
+%section#hero
+  #owl-main.owl-carousel.owl-one-item
+    .item{style: "background-image: url(#{asset_path 'pages/index/hero.jpg'});"}
+      .container
+        .caption.vertical-center.text-left
+          %h1.fadeInRight-1.dark-bg.light-color
+            %span
+              InnoZ-Rails
+            %br
+            %span
+              Ruby on Rails template
+          %p.fadeInRight-2.light-color
+            A template for fast Rails startup
 
-%h1 Welcome to the InnoZ Rails 5 template!
-.glyphicon.glyphicon-hand-up
+%section#introduction.light-bg
+  .container.inner
+    .row
+      .col-xs-12
+        %h1 Welcome to the InnoZ-Rails template
+        %h3 Based on Ruby on Rails 5

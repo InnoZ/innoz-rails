@@ -31,10 +31,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Custom gems for innoz-rails project
+gem 'jquery-ui-rails'
 gem 'bootstrap-sass'
 gem 'haml'
 gem 'postgresql'
 gem 'rubocop'
+gem 'mapbox-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

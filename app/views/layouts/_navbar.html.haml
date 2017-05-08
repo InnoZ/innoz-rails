@@ -1,0 +1,19 @@
+%header
+  .navbar
+    .navbar-header
+      .container
+        .navbar-brand.navbar-brand-mobile
+          = link_to root_path do
+            = image_tag 'logo_innoz.png', class: 'logo'
+        %a.navbar-toggle.btn.responsive-menu.pull-right{'data-target' => '.navbar-collapse', 'data-toggle' => 'collapse'}
+          %i.icon-menu-1
+    .yamm
+      .navbar-collapse.collapse
+        .container
+          = link_to root_path do
+            .navbar-brand
+              = image_tag 'logo_innoz.png', class: 'logo'
+          %ul.nav.navbar-nav
+            - pages.each do |p|
+              %li{class: ('active-navbar-li' if current_page?(controller: 'pages', action: p))}
+                = link_to p, send(p + '_path')

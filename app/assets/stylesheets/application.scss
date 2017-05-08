@@ -10,9 +10,60 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
 
- *= require_tree .
- *= require_self
+ *= require jquery-ui
+ *= require bootstrap_loader
+ *= require template_styles
+ *= require owl.carousel
+ *= require owl.transitions
+ *= require animate.min
+ *= require aos
+ *= require fontello
+ *= require blue
+ *= require mapbox
  */
 
- @import 'bootstrap-sprockets';
- @import 'bootstrap';
+ .navbar-brand-mobile img {
+   height: 40px;
+ }
+
+ .navbar-collapse.collapsing li {
+   float: none;
+ }
+
+ .navbar-collapse {
+   padding-top: 15px;
+ }
+
+ .active-navbar-li {
+  a {
+    color: #3F8DBF !important;
+    font-size: 101% !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar-collapse.collapse {
+    padding-bottom: 15px;
+  }
+}
+
+.btn {
+  border-radius: 0;
+}
+
+footer {
+  .logo {
+    width: 80%;
+  }
+}
+
+// for lists with glyphicons on each line start
+.icon-list-table {
+  th {
+    font-weight: normal;
+  }
+  .table-icon-cell {
+    vertical-align: top;
+    padding-right: 10px;
+  }
+}
