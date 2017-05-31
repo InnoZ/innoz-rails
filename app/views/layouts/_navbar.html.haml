@@ -4,7 +4,7 @@
       .container
         .navbar-brand.navbar-brand-mobile
           = link_to root_path do
-            = image_tag 'logo_innoz.png', class: 'logo'
+            = image_tag 'logo_innoz_rails_grey.png', class: 'logo'
         %a.navbar-toggle.btn.responsive-menu.pull-right{'data-target' => '.navbar-collapse', 'data-toggle' => 'collapse'}
           %i.icon-menu-1
     .yamm
@@ -12,8 +12,8 @@
         .container
           = link_to root_path do
             .navbar-brand
-              = image_tag 'logo_innoz.png', class: 'logo'
+              = image_tag 'logo_innoz_rails_grey.png', class: 'logo'
           %ul.nav.navbar-nav
             - pages.each do |p|
               %li{class: ('active-navbar-li' if current_page?(controller: 'pages', action: p))}
-                = link_to p, send(p + '_path')
+                = link_to t('views.nav.' + p), send(p + '_path')

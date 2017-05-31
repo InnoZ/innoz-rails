@@ -1,0 +1,26 @@
+de:
+  locale_name: 'deutsch'
+
+  service: 'InnoZ Rails'
+  learn_more: 'Mehr erfahren'
+  contact_our_team: 'Kontaktieren Sie unser Mobility Consulting Team!'
+  language: 'Sprache'
+  innoz: 'Innovationszentrum für Mobilität und gesellschaftlichen Wandel (InnoZ) GmbH'
+  innoz_address: 'EUREF-Campus 16, 10829 Berlin'
+
+  views:
+    nav:
+      about: 'Über uns'
+      contact: 'Kontakt'
+      privacy: 'Datenschutz'
+      imprint: 'Impressum'
+      about_us: 'Über uns'
+      contact_us: 'Kontaktieren Sie uns'
+
+    contact:
+      contact_us: 'Kontaktieren Sie uns'
+      contact_us_text: 'Möchten Sie mehr wissen? Wir freuen uns von Ihnen zu hören!'
+
+    footer:
+      part_of_innoz: 'Wir sind Teil des InnoZ.'
+      this_is_a_service_of_innoz: 'Data Driven Mobility Consulting ist ein Service des InnoZ.'

@@ -1,20 +1,20 @@
 %footer.dark-bg
   .container.inner
     .row
-      .col-sm-4.inner
-        %h4 About us
+      .col-sm-3.inner
+        %h4= t('views.nav.about_us')
         %figure
           = image_tag 'logo_innoz_rails.png', class: 'logo'
-        %p This is a service of InnoZ
-        = link_to 'learn more', 'http://www.innoz.de', class: 'txt-btn'
+        %p= t('views.footer.part_of_innoz')
+        = link_to t('learn more'), 'http://www.innoz.de', class: 'txt-btn'
 
-      .col-sm-4.inner
-        %h4 Contact us
-        %p Innovationszentrum für Mobilität und gesellschaftlichen Wandel (InnoZ) GmbH
+      .col-sm-3.inner
+        %h4= t('views.nav.contact_us')
+        %p= t('innoz')
         %ul.contacts
           %li
             %i.icon-location.contact
-            EUREF-Campus 16, 10829 Berlin
+            = t('innoz_address')
           %li
             %i.icon-mobile.contact
             +49 (0)30 23 88 84 - 108
@@ -22,16 +22,25 @@
             %i.icon-mail-1.contact
             = mail_to 'consulting@innoz.de'
 
-      .col-sm-4.inner
-        %h4 InnoZ Rails
+      .col-sm-3.inner
+        %h4= t('language')
+        - I18n.available_locales.each do |language|
+          - if language == locale
+            %b= t('locale_name', locale: language)
+          - else
+            = link_to t('locale_name', locale: language), locale: language
+          %br
+
+      .col-sm-3.inner
+        %h4= t('service')
         - pages.each do |p|
-          = link_to p, send(p + '_path')
+          = link_to t('views.nav.' + p), send(p + '_path')
           %br
 
   .footer-bottom
     .container.inner
-      %p.pull-left © 2016 InnoZ GmbH. All rights reserved.
+      %p.pull-left= "© #{Date.today.year} InnoZ GmbH. All rights reserved."
       %ul.footer-menu.pull-right
-        = link_to 'Imprint', imprint_path
+        = link_to t('views.nav.imprint'), imprint_path
         = ' | '
-        = link_to 'Privacy', privacy_path
+        = link_to t('views.nav.privacy'), privacy_path
