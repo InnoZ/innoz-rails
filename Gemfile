@@ -35,6 +35,7 @@ gem 'bootstrap-sass'
 gem 'haml'
 gem 'postgresql'
 gem 'rubocop'
+gem 'lograge'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

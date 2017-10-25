@@ -11,5 +11,11 @@ module InnozRails
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.lograge.enabled = true
+    config.lograge.custom_options = lambda do |event|
+      {
+        time: event.time.utc.iso8601,
+      }
+    end
   end
 end
